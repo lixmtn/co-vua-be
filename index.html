@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>Cờ Vua Bé</title>
+  <meta name="theme-color" content="#6c4cf1" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Cờ Vua Bé" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <!-- MAP -->
+  <main id="map" class="screen active">
+    <header class="map-top">
+      <div class="brand"><span id="brandIco"></span><h1>Cờ Vua Bé</h1></div>
+      <div class="star-pill">⭐ <b id="starCount">0</b></div>
+      <button class="icon-btn" id="parentBtn" aria-label="Ba mẹ">⚙️</button>
+    </header>
+    <div id="path"></div>
+  </main>
+
+  <!-- LESSON -->
+  <section id="lesson" class="screen">
+    <header class="les-top">
+      <button class="icon-btn" id="homeBtn" aria-label="Bản đồ">🗺️</button>
+      <div class="les-title" id="lessonTitle"></div>
+      <div class="progress" id="progress"></div>
+      <button class="icon-btn" id="resetBtn" aria-label="Chơi lại">↺</button>
+    </header>
+    <div class="prompt">
+      <div class="mascot" id="mascot"></div>
+      <button class="bubble" id="bubble"><span id="promptText"></span> <span class="spk">🔊</span></button>
+    </div>
+    <div id="stage"></div>
+  </section>
+
+  <!-- DONE -->
+  <div id="done" class="overlay">
+    <div class="card">
+      <div class="done-ico" id="doneIco"></div>
+      <h2 id="doneTitle">Giỏi quá!</h2>
+      <p id="doneText"></p>
+      <div class="row">
+        <button class="big-btn alt" id="toMapBtn">🗺️ Bản đồ</button>
+        <button class="big-btn" id="nextBtn">Bài tiếp ▶</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PARENT -->
+  <div id="parent" class="overlay">
+    <div class="card">
+      <div id="gate">
+        <h2>Dành cho ba mẹ</h2>
+        <p id="gateQ"></p>
+        <div class="row" id="gateOpts"></div>
+      </div>
+      <div id="panel" hidden>
+        <h2>Cài đặt</h2>
+        <label class="opt"><input type="checkbox" id="optVoice" /> Giọng đọc</label>
+        <label class="opt">Tốc độ đọc <input type="range" id="optRate" min="0.6" max="1.2" step="0.05" /></label>
+        <label class="opt"><input type="checkbox" id="optUnlock" /> Mở khoá tất cả bài</label>
+        <p class="small" id="voiceInfo"></p>
+        <div class="row">
+          <button class="big-btn alt" id="resetAll">Xoá tiến độ</button>
+          <button class="big-btn" id="closeParent">Xong</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- START (unlocks audio on iOS) -->
+  <div id="start" class="overlay show">
+    <div class="card start-card">
+      <div class="start-ico" id="startIco"></div>
+      <h2>Cờ Vua Bé</h2>
+      <button class="big-btn" id="startBtn">▶ Bắt đầu</button>
+    </div>
+  </div>
+
+  <div id="fx"></div>
+  <script src="app.js"></script>
+</body>
+</html>

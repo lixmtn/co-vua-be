@@ -100,7 +100,7 @@ button { font-family: inherit; color: inherit; border: 0; background: none; curs
 .sq.dark.sel { background: #d4e483; }
 .sq.yes { animation: flashY .8s; background: #ffe066 !important; }
 .sq.bad { background: #ff8c8c !important; }
-.sq.danger::after { content: ""; position: absolute; inset: 0; background: rgba(255, 70, 70, .32); }
+.sq.danger::after { content: ""; position: absolute; inset: 0; background: rgba(255, 60, 90, .55); box-shadow: inset 0 0 0 4px rgba(220, 30, 60, .6); }
 .sq.check { background: radial-gradient(circle, #ff5b5b 0, #ffb3b3 70%) !important; animation: throb 1s ease-in-out infinite; }
 .dot { position: absolute; left: 34%; top: 34%; width: 32%; height: 32%; border-radius: 50%; background: rgba(108, 76, 241, .55); animation: popIn .25s both; }
 .ring { position: absolute; inset: 6%; border-radius: 50%; border: 6px solid rgba(255, 70, 110, .75); animation: popIn .25s both; }
